@@ -3,7 +3,7 @@ const askKm = document.getElementById("ask-km");
 const askAge = document.getElementById("ask-age"); 
 const generateButton = document.getElementById("generate-button");
 const deleteButton = document.getElementById("delete-button");
-const outputBiglietto = document.getElementById("output-biglietto")
+const outputBiglietto = document.getElementById("output-biglietto");
 
 function generateRandom(min, max) {
     const num = Math.floor(Math.random() * 6 + 1); 
@@ -19,8 +19,6 @@ console.log(numKilom);
 const userAge = askAge.value
 console.log(userAge);
 
-const maggioreEta = 18
-let over65 = 65
 let discount = 0;
 let ticketPrice = Math.round(numKilom * 0.21)
 
@@ -54,24 +52,25 @@ console.log(message)
 const ilTuoBiglietto =`
 <div class="col-4">
   <h2>NOME PASSEGGERO</h2>
+  <div>${passengerName}</div>
 </div>
 <div class="col-8">
   <div class="row">
     <div class="col-2">
-        <h3>Offerta</h3>
+        <h4>Offerta</h4>
         <div>${offerta}</div>
     </div>
     <div class="col-2">
-        <h3>Carrozza</h3>
-        <div>${random(1, 6)}</div>
+        <h4>Carrozza</h4>
+        <div>${generateRandom(1, 6)}</div>
     </div>
     <div class="col-2">
-        <h3>Codice CP</h3>
-        <div>${random(1, 100000)}</div>
+        <h4>Codice CP</h4>
+        <div>${generateRandom(10000, 100000)}</div>
     </div>
-    </div class="col-2>
-        <h3>Sconto</h3>
-        <div class="col-2">${discount}</div>
+    <div class="col-2">
+        <h4>Sconto</h4>
+        <div>${discount}</div>
     </div>
   </div>
 </div>`;
