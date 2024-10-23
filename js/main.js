@@ -5,15 +5,11 @@ const generateButton = document.getElementById("generate-button");
 const deleteButton = document.getElementById("delete-button");
 const outputBiglietto = document.getElementById("output-biglietto")
 
-function randomCarrozza(min, max) {
-    const carrozza = Math.floor(Math.random() * 6 + 1); 
-    return carrozza
+function generateRandom(min, max) {
+    const num = Math.floor(Math.random() * 6 + 1); 
+    return num
 }
 
-function randomCP(min, max) {
-    const cp = Math.floor(Math.random() * 100000 + 1); 
-    return cp
-}
 
 generateButton.addEventListener("click", () => {
 const passengerName = askName.value
@@ -67,11 +63,11 @@ const ilTuoBiglietto =`
     </div>
     <div class="col-2">
         <h3>Carrozza</h3>
-        <div>${randomCarrozza(1, 6)}</div>
+        <div>${random(1, 6)}</div>
     </div>
     <div class="col-2">
         <h3>Codice CP</h3>
-        <div>${randomCP(1, 100000)}</div>
+        <div>${random(1, 100000)}</div>
     </div>
     </div class="col-2>
         <h3>Sconto</h3>
