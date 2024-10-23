@@ -24,14 +24,14 @@ let ticketPrice = Math.round(numKilom * 0.21)
 
 // SE eta è minore di 18 
 if(userAge === "Minorenne"){
-    discount = (ticketPrice * 20) / 100;
+    discount = ticketPrice - (ticketPrice * 20) / 100;
     message = "Il prezzo del tuo biglietto è di:" + " " + ticketPrice.toString() + "Euro, Hai diritto ad uno sconto del 20%! Ecco il prezzo scontato del tuo biglietto:" + " " + discount.toFixed(2)
     offerta = "Minorenni"
 }
 
 // ALTRIMENTI SE eta è maggiore di 65
 else if(userAge === "Over65"){
-    discount = (ticketPrice * 40) / 100;
+    discount = ticketPrice - (ticketPrice * 40) / 100;
     message = " Il prezzo del tuo biglietto è di:" + " " + ticketPrice.toString() + "Euro, Hai diritto ad uno sconto del 40%! Ecco il prezzo scontato del tuo biglietto:" + " " + discount.toFixed(2) 
     offerta = "Over65"
 }
@@ -69,7 +69,7 @@ const ilTuoBiglietto =`
         <div>${generateRandom(10000, 100000)}</div>
     </div>
     <div class="col-2">
-        <h4>Sconto</h4>
+        <h4>Costo biglietto</h4>
         <div>${discount}</div>
     </div>
   </div>
