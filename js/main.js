@@ -51,6 +51,8 @@ else{
     message = "Ooops, il numero che hai inserito non è valido =("
 }
 
+console.log(message)
+
 
 //! JS GENERAZIONE BIGLIETTO
 const ilTuoBiglietto =`
@@ -78,7 +80,7 @@ const ilTuoBiglietto =`
   </div>
 </div>`;
 
-outputBiglietto.innerHTML = ilTuoBiglietto
+outputBiglietto.innerHTML = ilTuoBiglietto;
 });
 
 
